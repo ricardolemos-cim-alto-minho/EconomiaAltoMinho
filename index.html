@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Observatório Económico do Alto Minho 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // C40 / Sustainable Modern Palette
+                        eco: {
+                            bg: '#F4F4F4',       // Light concrete grey
+                            paper: '#FFFFFF',    // Pure white
+                            ink: '#1A1A1A',      // Soft Black for text/borders
+                            lime: '#D2F220',     // The "Action" Green (C40 vibe)
+                            forest: '#005C42',   // Deep authoritative green
+                            sky: '#C2E5F2',      // Soft blue accent
+                            sand: '#EBE5D5'      // Warm neutral
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'], // Technical/Modern feel
+                    },
+                    boxShadow: {
+                        // Neo-Brutalist Hard Shadows
+                        'hard': '4px 4px 0px 0px #1A1A1A',
+                        'hard-lg': '8px 8px 0px 0px #1A1A1A',
+                        'hard-sm': '2px 2px 0px 0px #1A1A1A',
+                        'hard-hover': '6px 6px 0px 0px #1A1A1A',
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        'md': '8px',
+                        'lg': '12px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #E0E0E0;
+            color: #1A1A1A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        #root {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Grid Lines Background Pattern */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(26, 26, 26, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(26, 26, 26, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
+        .custom-scroll::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
